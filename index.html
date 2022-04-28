@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <!-- component -->
-<body class="antialiased" x-data="{ isOpen : false}" style="background-color: #0081b0;">
+<body class="antialiased" x-data="{ isOpen : false}">
 
     <!-- header -->
     <header class="header">
@@ -20,11 +20,11 @@
 
                     <!-- header logo -->
                     <div class="header-logo">
-                        <h1 class="font-semibold text-black leading-relaxed"><a href=""><img src="./assets/Untitldfdsed-1-removebg-preview.png" width="150px" height="100px"></a></h1>
+                        <h1 class="font-semibold text-black leading-relaxed w-24 md:w-48 h-24 md:h-48 absolute top-0"><img src="./assets/Untitldfdsed-1-removebg-preview.png"></h1>
                     </div>
 
                     <!-- mobile toggle -->
-                    <div class="toggle md:hidden">
+                    <div class="toggle md:hidden mt-8">
                         <button @click=" isOpen = true" @keydown.escape=" isOpen = false">
                             <svg 
                                 class="h-6 w-6 fill-current text-black"
@@ -37,7 +37,7 @@
                     </div>
 
                     <!-- Navbar -->
-                    <navbar class="navbar hidden md:block">
+                    <navbar class="navbar hidden md:block mt-12">
                         <ul class="flex space-x-8 text-sm font-semibold">
                             <li><a href="#" class="active border-b-2 border-orange-500 pb-2">Reviews</a></li>
                             <li><a href="#" class="hover:text-orange-500">People</a></li>
@@ -60,7 +60,7 @@
     <div class="mobile-navbar">         
 
         <!-- navbar wrapper -->
-        <div class="navbar-wrapper fixed top-0 left-0 h-full bg-white z-30 w-64 shadow-lg p-5" 
+        <div class="navbar-wrapper fixed top-0 left-0 h-full bg-white z-30 w-64 shadow-lg p-5 " 
             x-show="isOpen" 
             @click.away=" isOpen = false"
             x-transition:enter="transition duration-300 -ml-64" 
@@ -137,19 +137,19 @@
 
 <!---------------carousel-------------->
 
-<div class="max-w-8xl mx-auto">
+<div class="max-w-8xl mx-auto mt-20">
 
 	<div id="default-carousel" class="relative" data-carousel="static">
       
         <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-screen">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+               
                 <img src="./assets/boshpore.png" class="block absolute top-1/2 left-1/2 max-width-6xl h-full -translate-x-1/2 -translate-y-1/2" alt="...">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="./assets/magrev.jpeg" class="block absolute top-1/2 left-1/2 w-screen -translate-x-1/2 -translate-y-1/2" alt="...">
+                <img src="./assets/magrev.jpeg" class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -179,10 +179,10 @@
 
 
     <!--------------Kits-------->
-    <p class="font-semibold text-xl md:text-6xl ml-20">kits</p>
-    <div class="h-1 w-8 md:w-16 mt-1 rounded-full ml-20 bg-blue-600"></div>
+    <p class="font-semibold text-xl md:text-6xl ml-20 mt-16 ">Instrument</p>
+    <div class="h-1 w-8 md:w-24 mt-1 rounded-full ml-20 bg-sky-800"></div>
     
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font bg-white mt-10">
         <div class="container px-5 py-4 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
@@ -191,63 +191,82 @@
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
           </div>
           <div class="flex flex-wrap -m-4">
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="w-96 md:w-1/3 lg:w-1/3 sm:w-1/2 p-4">
                 <div class="flex relative h-80 ">
-                  <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./assets/UnioB24-22.jpg" style="border-radius: 15px;">
-                  <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <img alt="gallery" class="absolute inset-0 w-full h-full" src="./assets/UnioB24-22.jpg" style="border-radius: 15px;">
+                  <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-sky-500 rounded-xl opacity-0 hover:opacity-100">
+                    
+                    <h1 class="title-font text-lg mt-10 sm:mt-0 ml-8 md:ml-32 sm:text-xl font-bold text-white mb-3 sm:ml-24 md:absolute md:top-0">UNIO 24</h1>
+                    <p class="hidden md:block text-sm sm:text-justify text-gray-500 absolute top-7 left-0 ml-4 mr-4">Unio B24 Extraction System is a laboratory instrument for automated isolation of nucleic acids (DNA /RNA) from various biological sample materials (whole blood, serum, plasma, etc.) using the paramagnetic particles. Unio B24 Extraction System enables fast, pure, efficient and contamination-free nucleic acid isolation using the ready-to use cartridge system pre-filled by robotic tips and embedded protocols.
+  1 to 24 samples are loaded into the instrument very easily after just a short step of sample preparation. Cartridges are pierced for the first time by instrument and each sample is transferred to a dedicated reaction well by using separate sterile, filtered pipette tips assigned for each sample. This structural feature and the integrated UV lamps eliminate the risk of cross-contamination and provide a safe working environment.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-96 md:w-1/3 lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative h-80 ">
+                  <img alt="gallery" class="absolute inset-0 w-full h-full" src="./assets/A9F0AF9C-A4D2-416B-A2FB-2B7B6C05D782.png">
+                  <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-sky-500 rounded-xl opacity-0 hover:opacity-100">
+                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                    <h1 class="title-font text-lg mt-10 sm:mt-0 ml-20 md:m-o sm:text-xl font-bold text-white mb-3 sm:ml-24"></h1>
+                    <p class="hidden md:block text-sm sm:text-justify text-gray-500"> </p>
                   </div>
                 </div>
               </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative h-80 ">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./assets/A9F0AF9C-A4D2-416B-A2FB-2B7B6C05D782.png" style="border-radius: 15px;">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative h-80 ">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./assets/boshpore.png">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-sky-500 rounded-xl opacity-0 hover:opacity-100">
+                 
+                  <h1 class="title-font text-lg mt-10 sm:mt-0 ml-20 md:m-o sm:text-xl font-bold text-white mb-3 sm:ml-24">Bosphore SARS-CoV-2/Flu/RSV Panel Kit</h1>
+                  <p class="hidden md:block text-sm sm:text-justify text-gray-500">Bosphore SARS-CoV-2 / Flu / RSV Panel Kit is a Real-Time PCR-based in vitro diagnostic medical device, IVD CE marked according to 98/79/EC Directive. 
+
+                    Bosphore SARS-CoV-2/Flu/RSV Panel Kit detects and discriminates 2019-nCoV (which is later renamed officially as Severe acute respiratory Syndrome Coronavirus 2 (SARS-CoV-2) by WHO), RSV A&B and Influenza A&B ...
+                    
+                     </p>
+                     <button  class="w-32 h-10 ml-32 bg-indigo-700 text-gray-100 mt-3 text-center">
+                      <a type="button" href="./page.html">see More</a>                    
+
+                     </button>
+
                 </div>
               </div>
             </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="w-96 md:w-1/3 lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative h-80 ">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./assets/CFF7CE5A-E69A-4BF4-90BB-D9F2997795A6.png">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                <img alt="gallery" class="absolute inset-0 w-full h-full" src="./assets/7008D220-4867-4307-BAD1-03064DBF7C15.png">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-sky-500 rounded-xl opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                  <h1 class="title-font text-lg mt-10 sm:mt-0 ml-20 md:m-o sm:text-xl font-bold text-white mb-3 sm:ml-24">MAGREV MINI</h1>
+                  <p class="hidden md:block text-sm sm:text-justify text-gray-500">Magrev Mini Extraction Stand Base Unit (2 slots) provides the advantages of Magrev 24 Manual Extraction Stand with a twist! If you are handling smaller number of samples, Magrev Mini base unit gives you the liberty to increase the slots you can work as many as you wish depending on your samples. 
+
+                    Magrev Mini, designed, patented and produced by Anatolia Geneworks, is a unique approach to manual nucleic acid extraction by using magnetic beads. </p>
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative h-80 ">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./assets/Magnesia2448.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-sky-500 rounded-xl opacity-0 hover:opacity-100">
+                  <h1 class="title-font text-lg mt-10 sm:mt-0 ml-20 md:ml-32 sm:text-xl font-bold text-white mb-3 sm:ml-24">Magnesia 2448
+                  </h1>
+                  <p class="hidden md:block text-sm sm:text-justify text-gray-500">DNA extraction and PCR preparation systems are designed to precisely process all steps required for these complex and time-consuming applications on an automated platform. Sample pipetting, reagent dispensing, magnetic particle pipetting, separation and washing and the final transfer of the obtained DNA to the PCR tubes are performed in an environment protected from contamination.
+
+ 
+
+               
+                     </p>
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative h-80 ">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./assets/Magrev24.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <div class="flex relative h-80">
+                <img alt="gallery" class="absolute inset-0 w-full h-full" src="./assets/Magrev24.jpg">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-sky-500 rounded-xl opacity-0 hover:opacity-100">
+                  <h1 class="title-font text-lg mt-10 sm:mt-0 ml-20 md:ml-32 sm:text-xl font-bold text-white mb-3 sm:ml-24">MAGREV 24</h1>
+                  <p class="hidden md:block text-sm sm:text-justify text-gray-500">Magrev 24 Manual Magnetic Bead Nucleic Acid Extraction Stand for 24 Samples and Magrev Mini Base Extraction Stand are extremely advantageous and cost-effective platforms. Magrev is a very attractive system for both research and also diagnostics purposes.
+
+                    Genomic DNA extraction for 24 samples requires only 10 minutes of hands-on time, without the need for changing tube positions, also with no need for centrifugation. It’s not a prerequisite, but using a 6-channel adjustable spacer pipette makes the system even more practical and therefore is highly recommended. </p>
+                </div>
                 </div>
               </div>
             </div>
@@ -255,9 +274,41 @@
         </div>
       </section>
 
+<!---------footer----------------->
+<!-- component -->
+<!-- This is an example component -->
+<div class="max-w-screen mx-auto mt-32">
+
+	<footer class="p-4 bg-indigo-500 rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<a href="https://flowbite.com" target="_blank" class="flex items-center mb-4 sm:mb-0">
+	
+				<span class="self-center text-xl font-bold whitespace-nowrap text-white">REOMED BANGLADESH</span>
+			</a>
+			<ul class="flex flex-wrap items-center mb-6 sm:mb-0">
+				<li>
+					<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 text-gray-100">About</a>
+				</li>
+				<li>
+					<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 text-gray-100">Privacy
+						Policy</a>
+				</li>
+				<li>
+					<a href="#"
+						class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 text-gray-100">Licensing</a>
+				</li>
+				<li>
+					<a href="#" class="text-sm text-gray-500 hover:underline text-gray-100">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<hr class="my-6 border-gray-200 sm:mx-auto border-gray-400 lg:my-8" />
+		<span class="block text-sm text-gray-100 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" target="_blank" class="hover:underline">REOMED BANGLADESH</a>. All Rights Reserved.
+    </span>
+	</footer>
 
 
-
+</div>
 
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 </div>
